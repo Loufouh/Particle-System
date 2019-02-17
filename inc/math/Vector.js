@@ -43,6 +43,14 @@ class Vector {
 		return angle;
 	}
 
+	static distance(v, w) {
+		return Math.sqrt( Vector.squareDistance(v, w) );
+	}
+
+	static squareDistance(v, w) {
+		return (v.x - w.x)**2 + (v.y - w.y)**2;
+	}
+
 	static add(v, w) {
 		return new Vector(v.x + w.x, v.y + v.y);
 	}

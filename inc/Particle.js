@@ -3,7 +3,7 @@
 class Particle {
 	constructor(position) {
 		this.position = position;
-		this.velocity = new Vector(random(-0.5, 0.5), random(-1, -2));
+		this.velocity = new Vector(random(-0.5, 0.5), 0);
 		this.acceleration = new Vector();
 
 		this.radius = random(1, 5);
