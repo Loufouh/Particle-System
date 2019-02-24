@@ -15,6 +15,9 @@ class Block {
 		if(( particle.position.x + particle.radius ) > this.position.x && ( particle.position.x - particle.radius ) < ( this.position.x + this.side ) &&
 		   ( particle.position.y + particle.radius ) > this.position.y && ( particle.position.y - particle.radius )  < ( this.position.y + this.side ) )
 			return true;
+		else if(( particle.velocity.x + particle.position.x + particle.radius ) > this.position.x && ( particle.velocity.x + particle.position.x - particle.radius ) < ( this.position.x + this.side ) &&
+			( particle.velocity.y + particle.position.y + particle.radius ) > this.position.y && ( particle.velocity.y + particle.position.y - particle.radius ) < ( this.position.y + this.side ))
+			return true;
 		return false;
 		
 	}
